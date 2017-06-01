@@ -13,8 +13,8 @@
     </p>
     <div>
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
-            DataKeyNames="codigo" AutoGenerateEditButton="True" AutoGenerateColumns="False"
-            OnRowEditing="EditRecord" OnRowUpdating="UpdateRecord" OnRowCancelingEdit="CancelRecord"
+            DataKeyNames="codigo" AutoGenerateColumns="False"
+            OnRowEditing="EditRecord" OnRowUpdating="UpdateRecord" edit OnRowCancelingEdit="CancelRecord"
             OnRowDeleting="DeleteRecord" PageSize="5" Font-Names="Trebuchet MS"
             Height="233px" Width="100%" CssClass="gridView" AllowSorting="True" OnSorting="GridView1_Sorting" EmptyDataText="Não há nenhum registro disponível.">
             <FooterStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
@@ -25,6 +25,7 @@
             <HeaderStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="White" />
             <Columns>
+                <asp:CommandField CancelText="Cancelar" EditText="Editar" ShowEditButton="True" UpdateText="Salvar" />
                 <asp:BoundField DataField="Codigo" HeaderText="Codigo" ReadOnly="True" SortExpression="Codigo" Visible="false" />
 
                 <asp:TemplateField HeaderText="Base" SortExpression="Base">
