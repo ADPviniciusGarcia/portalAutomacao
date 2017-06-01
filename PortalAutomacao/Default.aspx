@@ -1,0 +1,14 @@
+﻿<%@ Page Title="Inserir Registros" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs" Inherits="TresCamadasAdoNet._Default" %>
+
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <h2>Início
+    </h2>
+    <p>
+        Selecione qual processo deseja consultar:
+    </p>
+    <asp:Button ID="btnValidacao" runat="server" Text="Validacao Eletrônica" OnClick="btnValidacao_Click" />
+    <asp:Button ID="btnSefip" runat="server" Text="SEFIP" OnClick="btnSefip_Click"  />
+</asp:Content>
