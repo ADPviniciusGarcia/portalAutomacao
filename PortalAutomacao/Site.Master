@@ -15,7 +15,7 @@
             <div class="header">
                 <div class="title">
                     <h1>
-                        <img alt="" src="http://10.150.255.80:9300/bi/images/ADP/logo_ADP_white.png" /> Portal Automação - Lista de processamento
+                        <img alt="" src="http://10.150.255.80:9300/bi/images/ADP/logo_ADP_white.png" /> <asp:Label ID="lblTitle" runat="server" Text="Portal Automação - Lista de processamento"></asp:Label>
                     </h1>
                 </div>
                 <div class="loginDisplay">

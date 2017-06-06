@@ -72,13 +72,13 @@ namespace TresCamadasAdoNet
                 {
                     NavigationMenu.Items.Remove(NavigationMenu.FindItem("Inserir Registros"));
                     NavigationMenu.Items.Remove(NavigationMenu.FindItem("Listar Registros"));
-
+                    lblTitle.Text = "Portal Automação - Lista de processamento - SEFIP";
                 }
                 if (Session["Contexto"].ToString() == "Validacao")
                 {
                     NavigationMenu.Items.Remove(NavigationMenu.FindItem("SEFIP Sem Movimento"));
                     NavigationMenu.Items.Remove(NavigationMenu.FindItem("SEFIP Retificadora"));
-
+                    lblTitle.Text = "Portal Automação - Lista de processamento - Validação Eletrônica";
                 }
             }
         }

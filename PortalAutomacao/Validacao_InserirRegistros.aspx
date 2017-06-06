@@ -41,7 +41,7 @@
             <td>Cliente:
             </td>
             <td>
-                <asp:TextBox ID="txtCliente" runat="server" Columns="4" Width="60px"></asp:TextBox>
+                <asp:TextBox ID="txtCliente" runat="server" Columns="4" Width="60px" MaxLength="7"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="req3" runat="server" Text="*" ControlToValidate="txtCliente"
@@ -54,7 +54,7 @@
             <td>Empresa:
             </td>
             <td>
-                <asp:TextBox ID="txtEmpresa" runat="Server" Columns="4" Width="60px"></asp:TextBox>
+                <asp:TextBox ID="txtEmpresa" runat="Server" Columns="4" Width="60px" MaxLength="7"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="Server" Text="*" ControlToValidate="txtEmpresa"
@@ -88,14 +88,14 @@
             <td>Ano:
             </td>
             <td>
-                <asp:TextBox ID="txtAno" runat="Server" Columns="4" Width="42px" MaxLength="4"></asp:TextBox>
+                <asp:TextBox ID="txtAno" runat="Server" Columns="4" Width="60px" MaxLength="4"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="Server" Text="*" ControlToValidate="txtAno"
                     Display="dynamic"></asp:RequiredFieldValidator>
                 <asp:CompareValidator ID="CompareValidator3" runat="Server" Text="Somente Inteiros" ControlToValidate="txtAno"
                     Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
-                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Ano inválido. Necessário 4 digitos" ControlToValidate="txtAno"
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Ano inválido. Necessário 4 números" ControlToValidate="txtAno"
                     MaximumValue="2030" MinimumValue="2010"></asp:RangeValidator>
             </td>
         </tr>
@@ -122,7 +122,7 @@
             <td>Codigos De Folha:
             </td>
             <td>
-                <asp:TextBox ID="txtCodigosDeFolha" runat="Server" Columns="4" Width="400px"></asp:TextBox>
+                <asp:TextBox ID="txtCodigosDeFolha" runat="Server" Columns="4" Width="400px" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="Server" Text="*" ControlToValidate="txtCodigosDeFolha"
@@ -133,13 +133,13 @@
             <td>Prioridade:
             </td>
             <td>
-                <asp:TextBox ID="txtPrioridade" runat="Server" Columns="4" Width="42px"></asp:TextBox>
+                <asp:TextBox ID="txtPrioridade" runat="Server" Columns="4" Width="60px" MaxLength="2"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="Server" Text="*" ControlToValidate="txtPrioridade"
                     Display="dynamic"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator1" runat="Server" Text="Somente Inteiros" ControlToValidate="txtPrioridade"
-                    Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+                <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Prioridade inválida. Digite um número de 0 a 99" ControlToValidate="txtPrioridade"
+                    MaximumValue="99" MinimumValue="0"></asp:RangeValidator>
             </td>
         </tr>
         <tr>

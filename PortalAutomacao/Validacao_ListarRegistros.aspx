@@ -57,7 +57,7 @@
                     </ItemTemplate>
                     <EditItemTemplate>
                         <asp:TextBox ID="txtCliente" runat="Server" Text='<%# Eval("Cliente") %>'
-                            Height="19px" Width="56px"></asp:TextBox>
+                            Height="19px" Width="56px" MaxLength="7"></asp:TextBox>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Empresa" SortExpression="Empresa">
@@ -66,7 +66,7 @@
                     </ItemTemplate>
                     <EditItemTemplate>
                         <asp:TextBox ID="txtEmpresa" runat="Server" Text='<%# Eval("Empresa") %>'
-                            Height="19px" Width="56px"></asp:TextBox>
+                            Height="19px" Width="56px" MaxLength="7"></asp:TextBox>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Mês" SortExpression="Mes">
@@ -96,7 +96,7 @@
                     </ItemTemplate>
                     <EditItemTemplate>
                         <asp:TextBox ID="txtAno" runat="Server" Text='<%# Eval("Ano") %>'
-                            Height="19px" Width="56px" MaxLength="4"></asp:TextBox>
+                            Height="19px" Width="42px" MaxLength="4"></asp:TextBox>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Tipo de Folha" SortExpression="TipoDeFolha">
@@ -126,7 +126,7 @@
                     <ItemStyle CssClass="col" />
                     <EditItemTemplate>
                         <asp:TextBox ID="txtCodigosDeFolha" runat="Server" ItemStyle-Width="500px" Text='<%# Eval("CodigosDeFolha") %>'
-                            Height="19px" Width="500px"></asp:TextBox>
+                            Height="38px" Width="500px" TextMode="MultiLine"></asp:TextBox>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Prioridade" SortExpression="Mes">
@@ -171,9 +171,10 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Deletar?">
                     <ItemTemplate>
-                        <span onclick="return confirm('Deseja realmente Excluir este item ?')">
-                            <asp:LinkButton ID="lnBD" runat="server" Text="Deletar" CommandName="Delete"></asp:LinkButton>
-                        </span>
+                        <span onclick="return confirm('O item será excluído agora. Clique em Ok para continuar.')">
+                            <span onclick="return confirm('Deseja realmente Excluir este item ?')">
+                                <asp:LinkButton ID="lnBD" runat="server" Text="Deletar" CommandName="Delete"></asp:LinkButton>
+                            </span></span>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
