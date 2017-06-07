@@ -2,6 +2,7 @@
     CodeBehind="Validacao_ListarRegistros.aspx.cs" Inherits="TresCamadasAdoNet.ListarRegistros" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <meta http-equiv="refresh" content="120"/>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>Listar Registros

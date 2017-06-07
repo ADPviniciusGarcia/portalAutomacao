@@ -7,8 +7,8 @@
     <h2>Início
     </h2>
     <p>
-        Selecione qual processo deseja consultar:
+        Selecione qual processo deseja acessar:
     </p>
-    <asp:Button ID="btnValidacao" runat="server" Text="Validacao Eletrônica" OnClick="btnValidacao_Click" />
-    <asp:Button ID="btnSefip" runat="server" Text="SEFIP" OnClick="btnSefip_Click"  />
+    <asp:Button ID="btnValidacao" runat="server" Text="Validação Eletrônica" OnClick="btnValidacao_Click" />
+    <asp:Button ID="btnSefip" runat="server" Text="SEFIP Sem Mov. e Retif." OnClick="btnSefip_Click"  />
 </asp:Content>
