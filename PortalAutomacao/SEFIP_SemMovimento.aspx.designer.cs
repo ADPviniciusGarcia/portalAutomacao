@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TresCamadasAdoNet {
+namespace PortalAutomacao {
     
     
     public partial class SEFIP_Sem_Movimento {

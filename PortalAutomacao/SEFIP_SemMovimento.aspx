@@ -1,4 +1,4 @@
-﻿<%@ Page Title="SEFIP Sem Movimento" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SEFIP_SemMovimento.aspx.cs" Inherits="TresCamadasAdoNet.SEFIP_Sem_Movimento" %>
+﻿<%@ Page Title="SEFIP Sem Movimento" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SEFIP_SemMovimento.aspx.cs" Inherits="PortalAutomacao.SEFIP_Sem_Movimento" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>

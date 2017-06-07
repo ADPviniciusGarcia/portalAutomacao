@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Listar Registros" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Validacao_ListarRegistros.aspx.cs" Inherits="TresCamadasAdoNet.ListarRegistros" %>
+    CodeBehind="Validacao_ListarRegistros.aspx.cs" Inherits="PortalAutomacao.ListarRegistros" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <meta http-equiv="refresh" content="120"/>

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Gestao de Usuarios" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Usuario.aspx.cs" Inherits="TresCamadasAdoNet.Usuario" %>
+    CodeBehind="Usuario.aspx.cs" Inherits="PortalAutomacao.Usuario" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>

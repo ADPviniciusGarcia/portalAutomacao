@@ -1,4 +1,4 @@
-﻿<%@ Page Title="SEFIP Retificadora" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SEFIP_Retificadora.aspx.cs" Inherits="TresCamadasAdoNet.SEFIP_Retificadora" %>
+﻿<%@ Page Title="SEFIP Retificadora" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SEFIP_Retificadora.aspx.cs" Inherits="PortalAutomacao.SEFIP_Retificadora" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>

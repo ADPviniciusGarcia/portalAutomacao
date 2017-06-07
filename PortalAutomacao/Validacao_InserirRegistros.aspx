@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Inserir Registros" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Validacao_InserirRegistros.aspx.cs" Inherits="TresCamadasAdoNet._Validacao_InserirRegistros" %>
+    CodeBehind="Validacao_InserirRegistros.aspx.cs" Inherits="PortalAutomacao._Validacao_InserirRegistros" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>

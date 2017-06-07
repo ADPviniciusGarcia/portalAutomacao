@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 
-namespace TresCamadasAdoNet
+namespace PortalAutomacao
 {
     public partial class _Default : System.Web.UI.Page
     {

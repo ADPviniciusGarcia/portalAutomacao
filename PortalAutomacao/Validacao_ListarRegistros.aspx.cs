@@ -3,7 +3,7 @@ using System.Web.UI.WebControls;
 using BAL;
 using System.Data;
 
-namespace TresCamadasAdoNet
+namespace PortalAutomacao
 {
     public partial class ListarRegistros : System.Web.UI.Page
     {

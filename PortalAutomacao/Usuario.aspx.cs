@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using BAL;
 using System.Data;
 
-namespace TresCamadasAdoNet
+namespace PortalAutomacao
 {
     public partial class Usuario : System.Web.UI.Page
     {

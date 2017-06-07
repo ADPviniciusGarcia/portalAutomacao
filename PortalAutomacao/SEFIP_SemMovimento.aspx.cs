@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TresCamadasAdoNet
+namespace PortalAutomacao
 {
     public partial class SEFIP_Sem_Movimento : System.Web.UI.Page
     {

@@ -2,7 +2,7 @@
 using System.Web.UI;
 using BAL;
 
-namespace TresCamadasAdoNet
+namespace PortalAutomacao
 {
     public partial class _Validacao_InserirRegistros : System.Web.UI.Page
     {
