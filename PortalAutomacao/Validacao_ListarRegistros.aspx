@@ -13,15 +13,27 @@
     <p>
     </p>
     <div>
-        <asp:Panel ID="pHeader" runat="server" CssClass="cpHeader">
-            <asp:Label ID="lblText" runat="server" />
-        </asp:Panel>
-        <asp:Panel ID="Panel1" runat="server">painel</asp:Panel>
-        <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender1" runat="server" TargetControlID="Panel1" CollapseControlID="pHeader"
-            ExpandControlID="pHeader"
-            Collapsed="true" TextLabelID="lblText" CollapsedText="Click to Show Content.." ExpandedText="Click to Hide Content.."
-            CollapsedSize="0" />
 
+        <asp:Panel ID="Panel1" runat="server" BackColor="White" BorderStyle="Double">
+
+            <div id="time"></div>
+            <script type="text/javascript">
+                var lefttime = 120;
+                var interval;
+                interval = setInterval('change()', 1000);
+
+
+                function change() {
+                    if (lefttime > 0) {
+                        lefttime--;
+                        document.getElementById('time').innerHTML = "A página será automaticamente atualizada em " + lefttime + " segundos.";
+                    }
+                }
+                change();
+            </script>
+        </asp:Panel>
+
+        <ajaxToolkit:AlwaysVisibleControlExtender ID="AlwaysVisibleControlExtender1" runat="server" TargetControlID="Panel1" HorizontalSide="Right" HorizontalOffset="50" VerticalSide="Bottom" VerticalOffset="50" />
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
             DataKeyNames="codigo" AutoGenerateColumns="False"
             OnRowEditing="EditRecord" OnRowUpdating="UpdateRecord" OnRowCancelingEdit="CancelRecord"
@@ -32,7 +44,7 @@
             <RowStyle BackColor="#EFF3FB" />
             <EditRowStyle BackColor="#99b3e6" />
             <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
             <HeaderStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="White" />
             <Columns>
