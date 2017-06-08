@@ -1,23 +1,33 @@
 ﻿<%@ Page Title="Listar Registros" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
     CodeBehind="Validacao_ListarRegistros.aspx.cs" Inherits="PortalAutomacao.ListarRegistros" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-    <meta http-equiv="refresh" content="120"/>
+
+    <meta http-equiv="refresh" content="120" />
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>Listar Registros
     </h2>
     <p>
-        <%--
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx"
-            Style="font-family: Calibri">Listar Registros</asp:HyperLink>--%>
     </p>
     <div>
+        <asp:Panel ID="pHeader" runat="server" CssClass="cpHeader">
+            <asp:Label ID="lblText" runat="server" />
+        </asp:Panel>
+        <asp:Panel ID="Panel1" runat="server">painel</asp:Panel>
+        <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender1" runat="server" TargetControlID="Panel1" CollapseControlID="pHeader"
+            ExpandControlID="pHeader"
+            Collapsed="true" TextLabelID="lblText" CollapsedText="Click to Show Content.." ExpandedText="Click to Hide Content.."
+            CollapsedSize="0" />
+
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
             DataKeyNames="codigo" AutoGenerateColumns="False"
-            OnRowEditing="EditRecord" OnRowUpdating="UpdateRecord" edit OnRowCancelingEdit="CancelRecord"
-            OnRowDeleting="DeleteRecord" PageSize="5" Font-Names="Trebuchet MS"
-            Height="233px" Width="100%" CssClass="gridView" AllowSorting="True" OnSorting="GridView1_Sorting" EmptyDataText="Não há nenhum registro disponível.">
+            OnRowEditing="EditRecord" OnRowUpdating="UpdateRecord" OnRowCancelingEdit="CancelRecord"
+            OnRowDeleting="DeleteRecord" PageSize="30" Font-Names="Trebuchet MS"
+            Height="233px" Width="100%" CssClass="gridView" AllowSorting="True" OnSorting="GridView1_Sorting" EmptyDataText="Não há nenhum registro disponível."
+            AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging">
             <FooterStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
             <RowStyle BackColor="#EFF3FB" />
             <EditRowStyle BackColor="#99b3e6" />
