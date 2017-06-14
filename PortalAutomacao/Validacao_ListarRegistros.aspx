@@ -5,35 +5,30 @@
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 
-    <meta http-equiv="refresh" content="120" />
+    <meta http-equiv="refresh" content="240" />
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>Listar Registros
     </h2>
-    <p>
-    </p>
+    <asp:Panel ID="Panel1" runat="server" BackColor="White" BorderStyle="Double">
+        <div id="time">A página será automaticamente atualizada em -- segundos.</div>
+    </asp:Panel>
+    <ajaxToolkit:AlwaysVisibleControlExtender ID="AlwaysVisibleControlExtender1" runat="server" TargetControlID="Panel1"
+        HorizontalSide="Right" HorizontalOffset="50" VerticalSide="Bottom" VerticalOffset="50" />
+    <script type="text/javascript">
+        var lefttime = 240;
+        var interval;
+        interval = setInterval('change()', 1000);
+
+
+        function change() {
+            if (lefttime > 0) {
+                lefttime--;
+                document.getElementById('time').innerHTML = " A página será automaticamente atualizada em " + lefttime + " segundos. ";
+            }
+        }
+    </script>
     <div>
-
-        <asp:Panel ID="Panel1" runat="server" BackColor="White" BorderStyle="Double">
-
-            <div id="time"></div>
-            <script type="text/javascript">
-                var lefttime = 120;
-                var interval;
-                interval = setInterval('change()', 1000);
-
-
-                function change() {
-                    if (lefttime > 0) {
-                        lefttime--;
-                        document.getElementById('time').innerHTML = "A página será automaticamente atualizada em " + lefttime + " segundos.";
-                    }
-                }
-                change();
-            </script>
-        </asp:Panel>
-
-        <ajaxToolkit:AlwaysVisibleControlExtender ID="AlwaysVisibleControlExtender1" runat="server" TargetControlID="Panel1" HorizontalSide="Right" HorizontalOffset="50" VerticalSide="Bottom" VerticalOffset="50" />
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"
             DataKeyNames="codigo" AutoGenerateColumns="False"
             OnRowEditing="EditRecord" OnRowUpdating="UpdateRecord" OnRowCancelingEdit="CancelRecord"
@@ -148,7 +143,7 @@
                     </ItemTemplate>
                     <ItemStyle CssClass="col" />
                     <EditItemTemplate>
-                        <asp:TextBox ID="txtCodigosDeFolha" runat="Server" ItemStyle-Width="500px" Text='<%# Eval("CodigosDeFolha") %>'
+                        <asp:TextBox ID="txtCodigosDeFolha" runat="Server" Text='<%# Eval("CodigosDeFolha") %>'
                             Height="38px" Width="500px" TextMode="MultiLine"></asp:TextBox>
                     </EditItemTemplate>
                 </asp:TemplateField>
@@ -206,7 +201,6 @@
         <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" ForeColor="#CC0000"
             Style="font-family: Aharoni"></asp:Label>
     </div>
-
 </asp:Content>
 
 

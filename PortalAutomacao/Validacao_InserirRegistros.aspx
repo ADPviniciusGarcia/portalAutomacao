@@ -19,7 +19,7 @@
             <td>Base:
             </td>
             <td>
-                <asp:DropDownList ID="ddlBase" runat="server">
+                <asp:DropDownList ID="ddlBase" runat="server"  Width="90px">
                     <asp:ListItem Value="1"></asp:ListItem>
                     <asp:ListItem>4</asp:ListItem>
                     <asp:ListItem>5</asp:ListItem>
@@ -41,7 +41,7 @@
             <td>Cliente:
             </td>
             <td>
-                <asp:TextBox ID="txtCliente" runat="server" Columns="4" Width="60px" MaxLength="7"></asp:TextBox>
+                <asp:TextBox ID="txtCliente" runat="server" Columns="4" Width="80px" MaxLength="7"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="req3" runat="server" Text="*" ControlToValidate="txtCliente"
@@ -54,7 +54,7 @@
             <td>Empresa:
             </td>
             <td>
-                <asp:TextBox ID="txtEmpresa" runat="Server" Columns="4" Width="60px" MaxLength="7"></asp:TextBox>
+                <asp:TextBox ID="txtEmpresa" runat="Server" Columns="4" Width="80px" MaxLength="7"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="Server" Text="*" ControlToValidate="txtEmpresa"
@@ -67,7 +67,7 @@
             <td>Mes:
             </td>
             <td>
-                <asp:DropDownList ID="ddlMes" runat="server">
+                <asp:DropDownList ID="ddlMes" runat="server" Width="90px" >
                     <asp:ListItem Value="Janeiro"></asp:ListItem>
                     <asp:ListItem>Fevereiro</asp:ListItem>
                     <asp:ListItem>Março</asp:ListItem>
@@ -88,7 +88,7 @@
             <td>Ano:
             </td>
             <td>
-                <asp:TextBox ID="txtAno" runat="Server" Columns="4" Width="60px" MaxLength="4"></asp:TextBox>
+                <asp:TextBox ID="txtAno" runat="Server" Columns="4" Width="80px" MaxLength="4"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="Server" Text="*" ControlToValidate="txtAno"
@@ -103,7 +103,7 @@
             <td>Tipo De Folha:
             </td>
             <td>
-                <asp:DropDownList ID="ddlTipoDeFolha" runat="server">
+                <asp:DropDownList ID="ddlTipoDeFolha" runat="server" Width="400px">
                     <asp:ListItem>ADIDET - ADIANTAMENTO DÉCIMO TERCEIRO</asp:ListItem>
                     <asp:ListItem>ADIPAR - ADIANTAMENTO PARCIAL</asp:ListItem>
                     <asp:ListItem>ADIQUI - ADIANTAMENTO QUINZENAL</asp:ListItem>
@@ -133,7 +133,7 @@
             <td>Prioridade:
             </td>
             <td>
-                <asp:TextBox ID="txtPrioridade" runat="Server" Columns="4" Width="60px" MaxLength="2"></asp:TextBox>
+                <asp:TextBox ID="txtPrioridade" runat="Server" Columns="4" Width="80px" MaxLength="2"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="Server" Text="*" ControlToValidate="txtPrioridade"
